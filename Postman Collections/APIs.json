@@ -1,0 +1,2153 @@
+{
+	"info": {
+		"_postman_id": "5dfc936a-8eb4-4c49-b75b-1fc700d13d9e",
+		"name": "Sistema Wvetro",
+		"description": "Para ativar esta função na sua licença entre em contato [Aquí](null) (pt).\n\nPara activar esta función en su licencia entre en contacto [Aquí](null) (es).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Financial",
+			"item": [
+				{
+					"name": "/ListTitulosRecebidos",
+					"_postman_id": "806f2684-4d71-4efe-91d7-509f82791bfe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrlFinanceiro}}/ListTitulosRecebidos?Dtbaixainicial=<date>&Dtbaixafinal=<date>",
+							"host": [
+								"{{BaseUrlFinanceiro}}"
+							],
+							"path": [
+								"ListTitulosRecebidos"
+							],
+							"query": [
+								{
+									"key": "Dtbaixainicial",
+									"value": "<date>"
+								},
+								{
+									"key": "Dtbaixafinal",
+									"value": "<date>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "bc57c5a1-9e25-45ee-ac36-f8462f1bb565",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListTitulosRecebidos?Dtbaixainicial=<date>&Dtbaixafinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListTitulosRecebidos"
+									],
+									"query": [
+										{
+											"key": "Dtbaixainicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtbaixafinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  },\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  }\n]"
+						},
+						{
+							"id": "d1026008-af0d-4cb8-96f1-f1353855350e",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListTitulosRecebidos?Dtbaixainicial=<date>&Dtbaixafinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListTitulosRecebidos"
+									],
+									"query": [
+										{
+											"key": "Dtbaixainicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtbaixafinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/ListTitulosReceber",
+					"_postman_id": "692e4548-18e4-47fa-b6b2-993fc31e9bf4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrlFinanceiro}}}}/ListTitulosReceber?Dtvencimentoinicial=<date>&Dtvencimentofinal=<date>",
+							"host": [
+								"{{BaseUrlFinanceiro}}}}"
+							],
+							"path": [
+								"ListTitulosReceber"
+							],
+							"query": [
+								{
+									"key": "Dtvencimentoinicial",
+									"value": "<date>"
+								},
+								{
+									"key": "Dtvencimentofinal",
+									"value": "<date>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "a91f2f2d-75d0-4da0-9863-25ba1c0d523c",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListTitulosReceber?Dtvencimentoinicial=<date>&Dtvencimentofinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListTitulosReceber"
+									],
+									"query": [
+										{
+											"key": "Dtvencimentoinicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtvencimentofinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "c6d43698-fc56-4c15-a824-5d29cc70fd43",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListTitulosReceber?Dtvencimentoinicial=<date>&Dtvencimentofinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListTitulosReceber"
+									],
+									"query": [
+										{
+											"key": "Dtvencimentoinicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtvencimentofinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  },\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "/ListTitulosPagos",
+					"_postman_id": "1ea680f9-a9fc-4e1f-a4ae-0c936b9b94da",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrlFinanceiro}}}}/ListTitulosPagos?Dtbaixainicial=<date>&Dtbaixafinal=<date>",
+							"host": [
+								"{{BaseUrlFinanceiro}}}}"
+							],
+							"path": [
+								"ListTitulosPagos"
+							],
+							"query": [
+								{
+									"key": "Dtbaixainicial",
+									"value": "<date>"
+								},
+								{
+									"key": "Dtbaixafinal",
+									"value": "<date>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "16d34d65-a95a-449b-8f17-7e1e4d367f18",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListTitulosPagos?Dtbaixainicial=<date>&Dtbaixafinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListTitulosPagos"
+									],
+									"query": [
+										{
+											"key": "Dtbaixainicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtbaixafinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "414c038d-eaa8-457b-ad94-a3bed6f63e97",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListTitulosPagos?Dtbaixainicial=<date>&Dtbaixafinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListTitulosPagos"
+									],
+									"query": [
+										{
+											"key": "Dtbaixainicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtbaixafinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  },\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "/ListTitulosPagar",
+					"_postman_id": "2e54e159-0190-4462-920f-905963837e50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrlFinanceiro}}/ListTitulosPagar?Dtvencimentoinicial=<date>&Dtvencimentofinal=<date>",
+							"host": [
+								"{{BaseUrlFinanceiro}}"
+							],
+							"path": [
+								"ListTitulosPagar"
+							],
+							"query": [
+								{
+									"key": "Dtvencimentoinicial",
+									"value": "<date>"
+								},
+								{
+									"key": "Dtvencimentofinal",
+									"value": "<date>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "25c5dccd-91c9-45e8-b1ea-5929c3d628a2",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListTitulosPagar?Dtvencimentoinicial=<date>&Dtvencimentofinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListTitulosPagar"
+									],
+									"query": [
+										{
+											"key": "Dtvencimentoinicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtvencimentofinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "401ec9d1-9d81-45e3-b9a1-176ad05a3427",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListTitulosPagar?Dtvencimentoinicial=<date>&Dtvencimentofinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListTitulosPagar"
+									],
+									"query": [
+										{
+											"key": "Dtvencimentoinicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtvencimentofinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  },\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "/ListChequesTerceiroRecebidos",
+					"_postman_id": "9a2273f9-9b2b-43e5-a34f-6320cef49c0c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "SoftwareId",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrlFinanceiro}}/ListChequesTerceiroRecebidos?Dtbaixainicial=<date>&Dtbaixafinal=<date>",
+							"host": [
+								"{{BaseUrlFinanceiro}}"
+							],
+							"path": [
+								"ListChequesTerceiroRecebidos"
+							],
+							"query": [
+								{
+									"key": "Dtbaixainicial",
+									"value": "<date>"
+								},
+								{
+									"key": "Dtbaixafinal",
+									"value": "<date>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "4d903602-b08b-4748-be6f-aa8840af37e3",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListChequesTerceiroRecebidos?Dtbaixainicial=<date>&Dtbaixafinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListChequesTerceiroRecebidos"
+									],
+									"query": [
+										{
+											"key": "Dtbaixainicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtbaixafinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "99e9aa4e-e720-4d86-ba91-79b46584008a",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListChequesTerceiroRecebidos?Dtbaixainicial=<date>&Dtbaixafinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListChequesTerceiroRecebidos"
+									],
+									"query": [
+										{
+											"key": "Dtbaixainicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtbaixafinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  },\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "/ListChequesTerceiro",
+					"_postman_id": "7fe66399-3be5-47db-83ce-5485d5e718cb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrlFinanceiro}}}/ListChequesTerceiro?Dtvencimentoinicial=<date>&Dtvencimentofinal=<date>",
+							"host": [
+								"{{BaseUrlFinanceiro}}}"
+							],
+							"path": [
+								"ListChequesTerceiro"
+							],
+							"query": [
+								{
+									"key": "Dtvencimentoinicial",
+									"value": "<date>"
+								},
+								{
+									"key": "Dtvencimentofinal",
+									"value": "<date>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "3de6ef40-2743-4b4d-9cac-6e35c2e3f108",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListChequesTerceiro?Dtvencimentoinicial=<date>&Dtvencimentofinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListChequesTerceiro"
+									],
+									"query": [
+										{
+											"key": "Dtvencimentoinicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtvencimentofinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  },\n  {\n    \"TituloId\": \"<long>\",\n    \"TituloTipo\": \"<string>\",\n    \"PessoaRazao\": \"<string>\",\n    \"VendedorTituloNome\": \"<string>\",\n    \"TituloReferencia\": \"<string>\",\n    \"TituloDocumento\": \"<string>\",\n    \"TituloDtCadastro\": \"<date>\",\n    \"TituloDtEmissao\": \"<date>\",\n    \"TituloDtVencimento\": \"<date>\",\n    \"GrupoCustoCodigo\": \"<string>\",\n    \"GrupoCustoDescricao\": \"<string>\",\n    \"CentroCustoCodigo\": \"<string>\",\n    \"CentroCustoDescricao\": \"<string>\",\n    \"TituloVlrTitulo\": \"<double>\",\n    \"TituloDtBaixa\": \"<date>\",\n    \"TituloVlrRecebido\": \"<double>\",\n    \"TituloVlrSaldo\": \"<double>\",\n    \"TituloEmitente\": \"<string>\",\n    \"TituloObs\": \"<string>\",\n    \"TituloTipoLancamento\": \"<string>\",\n    \"TituloOrigem\": \"<string>\",\n    \"TituloNossoNumero\": \"<string>\",\n    \"TituloPixTextContent\": \"<string>\",\n    \"TituloPixPagoStatus\": \"<string>\",\n    \"TituloPixPagoNome\": \"<string>\",\n    \"TituloVlrTaxaCartao\": \"<double>\",\n    \"ObraTituloNome\": \"<string>\",\n    \"TituloUsuario\": \"<string>\",\n    \"DivisaoNome\": \"<string>\",\n    \"TituloNroParc\": \"<long>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  }\n]"
+						},
+						{
+							"id": "c0627975-1011-480f-8764-1e4a1669c368",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListChequesTerceiro?Dtvencimentoinicial=<date>&Dtvencimentofinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListChequesTerceiro"
+									],
+									"query": [
+										{
+											"key": "Dtvencimentoinicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtvencimentofinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				}
+			],
+			"_postman_id": "5a623c75-f4ee-4db5-ae79-19cf069d36ec"
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "/ListTiposCliente",
+					"_postman_id": "2b26a2c6-7851-411d-b067-9504834529e8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrlClientes}}/ListTiposCliente"
+					},
+					"response": [
+						{
+							"id": "d085625e-1ec1-43dc-a783-6980f1b2f825",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/ListTiposCliente"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "f3b57bd7-b73f-4b69-b57d-63d169569346",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/ListTiposCliente"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"TipoclienteId\": \"<long>\",\n    \"LicencaId\": \"<long>\",\n    \"TipoClienteNome\": \"<string>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  },\n  {\n    \"TipoclienteId\": \"<long>\",\n    \"LicencaId\": \"<long>\",\n    \"TipoClienteNome\": \"<string>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "/ListClientes",
+					"_postman_id": "b21aa2e2-19fd-48b1-ab19-3f742ebbdbd1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrlClientes}}/ListClientes"
+					},
+					"response": [
+						{
+							"id": "4ea7d5bb-e856-4574-991f-6734875b7d79",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/ListClientes"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"PessoaId\": \"<long>\",\n    \"PessoaCodigo\": \"<long>\",\n    \"PessoaLicencaId\": \"<long>\",\n    \"PessoaTipo\": \"<string>\",\n    \"PessoaCPFCNPJ\": \"<string>\",\n    \"PessoaRGIE\": \"<string>\",\n    \"PessoaRua\": \"<string>\",\n    \"PessoaNro\": \"<string>\",\n    \"PessoaComplemento\": \"<string>\",\n    \"PessoaBairro\": \"<string>\",\n    \"PessoaUF\": \"<string>\",\n    \"PessoaRazaoSocial\": \"<string>\",\n    \"PessoaFantasia\": \"<string>\",\n    \"PessoaDtNascContr\": \"<date>\",\n    \"PessoaResponsavel\": \"<string>\",\n    \"PessoaEmail\": \"<string>\",\n    \"PessoaEmailNFeCopia\": \"<string>\",\n    \"PessoaSite\": \"<string>\",\n    \"PessoaObs\": \"<string>\",\n    \"PessoaCep\": \"<string>\",\n    \"PessoaFone\": \"<string>\",\n    \"PessoaCelular\": \"<string>\",\n    \"PessoaFax\": \"<string>\",\n    \"UFSigla\": \"<string>\",\n    \"UFCodIBGE\": \"<integer>\",\n    \"CidadeNome\": \"<string>\",\n    \"CidadeNumeronaUF\": \"<long>\",\n    \"TipoClienteId\": \"<long>\",\n    \"PessoaVlrLimite\": \"<double>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  },\n  {\n    \"PessoaId\": \"<long>\",\n    \"PessoaCodigo\": \"<long>\",\n    \"PessoaLicencaId\": \"<long>\",\n    \"PessoaTipo\": \"<string>\",\n    \"PessoaCPFCNPJ\": \"<string>\",\n    \"PessoaRGIE\": \"<string>\",\n    \"PessoaRua\": \"<string>\",\n    \"PessoaNro\": \"<string>\",\n    \"PessoaComplemento\": \"<string>\",\n    \"PessoaBairro\": \"<string>\",\n    \"PessoaUF\": \"<string>\",\n    \"PessoaRazaoSocial\": \"<string>\",\n    \"PessoaFantasia\": \"<string>\",\n    \"PessoaDtNascContr\": \"<date>\",\n    \"PessoaResponsavel\": \"<string>\",\n    \"PessoaEmail\": \"<string>\",\n    \"PessoaEmailNFeCopia\": \"<string>\",\n    \"PessoaSite\": \"<string>\",\n    \"PessoaObs\": \"<string>\",\n    \"PessoaCep\": \"<string>\",\n    \"PessoaFone\": \"<string>\",\n    \"PessoaCelular\": \"<string>\",\n    \"PessoaFax\": \"<string>\",\n    \"UFSigla\": \"<string>\",\n    \"UFCodIBGE\": \"<integer>\",\n    \"CidadeNome\": \"<string>\",\n    \"CidadeNumeronaUF\": \"<long>\",\n    \"TipoClienteId\": \"<long>\",\n    \"PessoaVlrLimite\": \"<double>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  }\n]"
+						},
+						{
+							"id": "69dfce7c-edad-40cc-8969-c408e6ce6c4c",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/ListClientes"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/InsertTipoCliente__post",
+					"_postman_id": "791cfdf7-6b49-4109-a812-b3134f33f903",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"SdtInsertTipoCliente\": {\n    \"TipoClienteNome\": \"<string>\"\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrlClientes}}/InsertTipoCliente"
+					},
+					"response": [
+						{
+							"id": "1e32b0d9-325a-4c2c-9cce-ddfef71199cb",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"SdtInsertTipoCliente\": {\n    \"TipoClienteNome\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/InsertTipoCliente"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "91f1dc06-8c44-443c-98c6-83e7952f3265",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"SdtInsertTipoCliente\": {\n    \"TipoClienteNome\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/InsertTipoCliente"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  },\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "/InsertCliente__post",
+					"_postman_id": "0377c131-b619-4696-90ce-c945b44bcab2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencanId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"sdtInsertCliente\": {\n    \"PessoaCodigo\": \"<long>\",\n    \"PessoaTipo\": \"<string>\",\n    \"PessoaCPFCNPJ\": \"<string>\",\n    \"PessoaRGIE\": \"<string>\",\n    \"PessoaRua\": \"<string>\",\n    \"PessoaNro\": \"<string>\",\n    \"PessoaComplemento\": \"<string>\",\n    \"PessoaBairro\": \"<string>\",\n    \"PessoaUF\": \"<string>\",\n    \"PessoaRazaoSocial\": \"<string>\",\n    \"PessoaFantasia\": \"<string>\",\n    \"PessoaDtNascContr\": \"<date>\",\n    \"PessoaResponsavel\": \"<string>\",\n    \"PessoaEmail\": \"<string>\",\n    \"PessoaEmailNFeCopia\": \"<string>\",\n    \"PessoaSite\": \"<string>\",\n    \"PessoaObs\": \"<string>\",\n    \"PessoaCep\": \"<string>\",\n    \"PessoaFone\": \"<string>\",\n    \"PessoaCelular\": \"<string>\",\n    \"PessoaFax\": \"<string>\",\n    \"UFSigla\": \"<string>\",\n    \"CidadeNome\": \"<string>\",\n    \"TipoClienteId\": \"<long>\",\n    \"PessoaVlrLimite\": \"<double>\"\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrlClientes}}/InsertCliente"
+					},
+					"response": [
+						{
+							"id": "877d67e7-bbca-4875-baf5-759642389c69",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sdtInsertCliente\": {\n    \"PessoaCodigo\": \"<long>\",\n    \"PessoaTipo\": \"<string>\",\n    \"PessoaCPFCNPJ\": \"<string>\",\n    \"PessoaRGIE\": \"<string>\",\n    \"PessoaRua\": \"<string>\",\n    \"PessoaNro\": \"<string>\",\n    \"PessoaComplemento\": \"<string>\",\n    \"PessoaBairro\": \"<string>\",\n    \"PessoaUF\": \"<string>\",\n    \"PessoaRazaoSocial\": \"<string>\",\n    \"PessoaFantasia\": \"<string>\",\n    \"PessoaDtNascContr\": \"<date>\",\n    \"PessoaResponsavel\": \"<string>\",\n    \"PessoaEmail\": \"<string>\",\n    \"PessoaEmailNFeCopia\": \"<string>\",\n    \"PessoaSite\": \"<string>\",\n    \"PessoaObs\": \"<string>\",\n    \"PessoaCep\": \"<string>\",\n    \"PessoaFone\": \"<string>\",\n    \"PessoaCelular\": \"<string>\",\n    \"PessoaFax\": \"<string>\",\n    \"UFSigla\": \"<string>\",\n    \"CidadeNome\": \"<string>\",\n    \"TipoClienteId\": \"<long>\",\n    \"PessoaVlrLimite\": \"<double>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/InsertCliente"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "a079c42a-82c9-42d5-ba76-8c7f9abd6d51",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sdtInsertCliente\": {\n    \"PessoaCodigo\": \"<long>\",\n    \"PessoaTipo\": \"<string>\",\n    \"PessoaCPFCNPJ\": \"<string>\",\n    \"PessoaRGIE\": \"<string>\",\n    \"PessoaRua\": \"<string>\",\n    \"PessoaNro\": \"<string>\",\n    \"PessoaComplemento\": \"<string>\",\n    \"PessoaBairro\": \"<string>\",\n    \"PessoaUF\": \"<string>\",\n    \"PessoaRazaoSocial\": \"<string>\",\n    \"PessoaFantasia\": \"<string>\",\n    \"PessoaDtNascContr\": \"<date>\",\n    \"PessoaResponsavel\": \"<string>\",\n    \"PessoaEmail\": \"<string>\",\n    \"PessoaEmailNFeCopia\": \"<string>\",\n    \"PessoaSite\": \"<string>\",\n    \"PessoaObs\": \"<string>\",\n    \"PessoaCep\": \"<string>\",\n    \"PessoaFone\": \"<string>\",\n    \"PessoaCelular\": \"<string>\",\n    \"PessoaFax\": \"<string>\",\n    \"UFSigla\": \"<string>\",\n    \"CidadeNome\": \"<string>\",\n    \"TipoClienteId\": \"<long>\",\n    \"PessoaVlrLimite\": \"<double>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/InsertCliente"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  },\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  }\n]"
+						}
+					]
+				}
+			],
+			"_postman_id": "d2354a64-9353-43bb-82fe-2a47a54ae8c9"
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "/ListPedidos",
+					"_postman_id": "ef769299-f680-4646-b732-f4d8d0d13e86",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrlPedidos}}/ListPedidos?Dtvendainicial=<date>&Dtvendafinal=<date>",
+							"host": [
+								"{{BaseUrlPedidos}}"
+							],
+							"path": [
+								"ListPedidos"
+							],
+							"query": [
+								{
+									"key": "Dtvendainicial",
+									"value": "<date>"
+								},
+								{
+									"key": "Dtvendafinal",
+									"value": "<date>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "96a29736-4506-418d-aaea-3cc5b96d0b51",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListPedidos?Dtvendainicial=<date>&Dtvendafinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListPedidos"
+									],
+									"query": [
+										{
+											"key": "Dtvendainicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtvendafinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"LicencaId\": \"<long>\",\n    \"LicencaCNPJ\": \"<string>\",\n    \"Nro\": \"<long>\",\n    \"DtEmissao\": \"<date>\",\n    \"Data\": \"<date>\",\n    \"ClienteCodigo\": \"<long>\",\n    \"ClienteNome\": \"<string>\",\n    \"ClienteCNPJ\": \"<string>\",\n    \"ClienteRGInscricao\": \"<string>\",\n    \"Situacao\": \"<string>\",\n    \"VendedorNome\": \"<string>\",\n    \"DescontoVlr\": \"<double>\",\n    \"ValorBruto\": \"<double>\",\n    \"Total\": \"<double>\",\n    \"TotalM2Arred\": \"<double>\",\n    \"TotalM2\": \"<double>\",\n    \"SaldoFaturarVlr\": \"<double>\",\n    \"Endereco\": {\n      \"Rua\": \"<string>\",\n      \"Nro\": \"<string>\",\n      \"Bairro\": \"<string>\",\n      \"Cidade\": \"<string>\",\n      \"CidadeNumeronaUF\": \"<long>\",\n      \"UF\": \"<string>\",\n      \"CEP\": \"<string>\",\n      \"UFCodIBGE\": \"<integer>\"\n    }\n  },\n  {\n    \"LicencaId\": \"<long>\",\n    \"LicencaCNPJ\": \"<string>\",\n    \"Nro\": \"<long>\",\n    \"DtEmissao\": \"<date>\",\n    \"Data\": \"<date>\",\n    \"ClienteCodigo\": \"<long>\",\n    \"ClienteNome\": \"<string>\",\n    \"ClienteCNPJ\": \"<string>\",\n    \"ClienteRGInscricao\": \"<string>\",\n    \"Situacao\": \"<string>\",\n    \"VendedorNome\": \"<string>\",\n    \"DescontoVlr\": \"<double>\",\n    \"ValorBruto\": \"<double>\",\n    \"Total\": \"<double>\",\n    \"TotalM2Arred\": \"<double>\",\n    \"TotalM2\": \"<double>\",\n    \"SaldoFaturarVlr\": \"<double>\",\n    \"Endereco\": {\n      \"Rua\": \"<string>\",\n      \"Nro\": \"<string>\",\n      \"Bairro\": \"<string>\",\n      \"Cidade\": \"<string>\",\n      \"CidadeNumeronaUF\": \"<long>\",\n      \"UF\": \"<string>\",\n      \"CEP\": \"<string>\",\n      \"UFCodIBGE\": \"<integer>\"\n    }\n  }\n]"
+						},
+						{
+							"id": "e35e9b52-fe02-42ff-bbfd-c5140c7da4b9",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListPedidos?Dtvendainicial=<date>&Dtvendafinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListPedidos"
+									],
+									"query": [
+										{
+											"key": "Dtvendainicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtvendafinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/ListOrcamentos",
+					"_postman_id": "f8bc498b-1e8c-418d-8ea6-7f5f08129d11",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrlPedidos}}/ListOrcamentos?Dtcadastroinicial=<date>&Dtcadastrofinal=<date>",
+							"host": [
+								"{{BaseUrlPedidos}}"
+							],
+							"path": [
+								"ListOrcamentos"
+							],
+							"query": [
+								{
+									"key": "Dtcadastroinicial",
+									"value": "<date>"
+								},
+								{
+									"key": "Dtcadastrofinal",
+									"value": "<date>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "2ce842a9-2f9e-48b5-9c88-833f52743349",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListOrcamentos?Dtcadastroinicial=<date>&Dtcadastrofinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListOrcamentos"
+									],
+									"query": [
+										{
+											"key": "Dtcadastroinicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtcadastrofinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"LicencaId\": \"<long>\",\n    \"LicencaCNPJ\": \"<string>\",\n    \"Nro\": \"<long>\",\n    \"DtEmissao\": \"<date>\",\n    \"Data\": \"<date>\",\n    \"ClienteCodigo\": \"<long>\",\n    \"ClienteNome\": \"<string>\",\n    \"ClienteCNPJ\": \"<string>\",\n    \"ClienteRGInscricao\": \"<string>\",\n    \"Situacao\": \"<string>\",\n    \"VendedorNome\": \"<string>\",\n    \"DescontoVlr\": \"<double>\",\n    \"ValorBruto\": \"<double>\",\n    \"Total\": \"<double>\",\n    \"TotalM2Arred\": \"<double>\",\n    \"TotalM2\": \"<double>\",\n    \"SaldoFaturarVlr\": \"<double>\",\n    \"Endereco\": {\n      \"Rua\": \"<string>\",\n      \"Nro\": \"<string>\",\n      \"Bairro\": \"<string>\",\n      \"Cidade\": \"<string>\",\n      \"CidadeNumeronaUF\": \"<long>\",\n      \"UF\": \"<string>\",\n      \"CEP\": \"<string>\",\n      \"UFCodIBGE\": \"<integer>\"\n    }\n  },\n  {\n    \"LicencaId\": \"<long>\",\n    \"LicencaCNPJ\": \"<string>\",\n    \"Nro\": \"<long>\",\n    \"DtEmissao\": \"<date>\",\n    \"Data\": \"<date>\",\n    \"ClienteCodigo\": \"<long>\",\n    \"ClienteNome\": \"<string>\",\n    \"ClienteCNPJ\": \"<string>\",\n    \"ClienteRGInscricao\": \"<string>\",\n    \"Situacao\": \"<string>\",\n    \"VendedorNome\": \"<string>\",\n    \"DescontoVlr\": \"<double>\",\n    \"ValorBruto\": \"<double>\",\n    \"Total\": \"<double>\",\n    \"TotalM2Arred\": \"<double>\",\n    \"TotalM2\": \"<double>\",\n    \"SaldoFaturarVlr\": \"<double>\",\n    \"Endereco\": {\n      \"Rua\": \"<string>\",\n      \"Nro\": \"<string>\",\n      \"Bairro\": \"<string>\",\n      \"Cidade\": \"<string>\",\n      \"CidadeNumeronaUF\": \"<long>\",\n      \"UF\": \"<string>\",\n      \"CEP\": \"<string>\",\n      \"UFCodIBGE\": \"<integer>\"\n    }\n  }\n]"
+						},
+						{
+							"id": "f26817e5-08fd-4184-b2d1-ef1433fb8ea2",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ListOrcamentos?Dtcadastroinicial=<date>&Dtcadastrofinal=<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ListOrcamentos"
+									],
+									"query": [
+										{
+											"key": "Dtcadastroinicial",
+											"value": "<date>"
+										},
+										{
+											"key": "Dtcadastrofinal",
+											"value": "<date>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/GetPedidoByKey",
+					"_postman_id": "164a2ee4-5a32-4977-bd85-7e783e2d1ecb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrlPedidos}}/GetPedidoByKey?Orcamentoid=<long>",
+							"host": [
+								"{{BaseUrlPedidos}}"
+							],
+							"path": [
+								"GetPedidoByKey"
+							],
+							"query": [
+								{
+									"key": "Orcamentoid",
+									"value": "<long>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "576ea607-ec91-410c-95dc-6a5ab5f2b287",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/GetPedidoByKey?Orcamentoid=<long>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetPedidoByKey"
+									],
+									"query": [
+										{
+											"key": "Orcamentoid",
+											"value": "<long>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"LicencaId\": \"<long>\",\n  \"LicencaCNPJ\": \"<string>\",\n  \"Nro\": \"<long>\",\n  \"DtEmissao\": \"<date>\",\n  \"Data\": \"<date>\",\n  \"ClienteCodigo\": \"<long>\",\n  \"ClienteNome\": \"<string>\",\n  \"ClienteCNPJ\": \"<string>\",\n  \"ClienteRGInscricao\": \"<string>\",\n  \"Situacao\": \"<string>\",\n  \"VendedorNome\": \"<string>\",\n  \"DescontoVlr\": \"<double>\",\n  \"ValorBruto\": \"<double>\",\n  \"Total\": \"<double>\",\n  \"TotalM2Arred\": \"<double>\",\n  \"TotalM2\": \"<double>\",\n  \"SaldoFaturarVlr\": \"<double>\",\n  \"Endereco\": {\n    \"Rua\": \"<string>\",\n    \"Nro\": \"<string>\",\n    \"Bairro\": \"<string>\",\n    \"Cidade\": \"<string>\",\n    \"CidadeNumeronaUF\": \"<long>\",\n    \"UF\": \"<string>\",\n    \"CEP\": \"<string>\",\n    \"UFCodIBGE\": \"<integer>\"\n  }\n}"
+						},
+						{
+							"id": "f7f4a1ff-6233-4515-a301-785e0a0e41c7",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/GetPedidoByKey?Orcamentoid=<long>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetPedidoByKey"
+									],
+									"query": [
+										{
+											"key": "Orcamentoid",
+											"value": "<long>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/ConfirmarIntegracao__post",
+					"_postman_id": "f707d3ef-9575-417b-b626-91cb71555d4a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"OrcamentoId\": \"<long>\",\n  \"NroPedidoTempera\": \"<long>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrlPedidos}}}/ConfirmarIntegracao"
+					},
+					"response": [
+						{
+							"id": "76a71755-5b9d-42ce-a331-c9262df8e7b4",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"OrcamentoId\": \"<long>\",\n  \"NroPedidoTempera\": \"<long>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/ConfirmarIntegracao"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "d6b04bab-f1e3-4ac8-b33f-1710071d8668",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"OrcamentoId\": \"<long>\",\n  \"NroPedidoTempera\": \"<long>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/ConfirmarIntegracao"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  },\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  }\n]"
+						}
+					]
+				}
+			],
+			"_postman_id": "1842b835-a826-4a52-8981-65a0b0b39c40"
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "/VincularProduto__post",
+					"_postman_id": "a57edf4b-b3f8-43e7-aeeb-21bfb29b32a9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Softare-Hahs",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"sdtVincularProduto\": {\n    \"ProdutoCodigo\": \"<string>\",\n    \"ProdutoSeuCodigo\": \"<string>\"\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrlProdutos}}/VincularProduto"
+					},
+					"response": [
+						{
+							"id": "522fd96e-2d84-41f4-98e8-e9d9b373acca",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sdtVincularProduto\": {\n    \"ProdutoCodigo\": \"<string>\",\n    \"ProdutoSeuCodigo\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/VincularProduto"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "9d701451-a64f-4e03-99ec-4265b80acfa2",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sdtVincularProduto\": {\n    \"ProdutoCodigo\": \"<string>\",\n    \"ProdutoSeuCodigo\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/VincularProduto"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  },\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "/ListVidros__get",
+					"_postman_id": "dffa6999-949c-4b48-947a-1de155e3b478",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrlProdutos}}/ListVidros"
+					},
+					"response": [
+						{
+							"id": "00b029d3-604a-4d84-96ba-01b2697607ed",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/ListVidros"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "75b5ebdb-c933-4509-ab9b-67fd90360f3d",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/ListVidros"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"CorNome\": \"<string>\",\n    \"CorEspessura\": \"<integer>\",\n    \"CorVidroPeso\": \"<double>\",\n    \"CorNCM\": \"<string>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  },\n  {\n    \"CorNome\": \"<string>\",\n    \"CorEspessura\": \"<integer>\",\n    \"CorVidroPeso\": \"<double>\",\n    \"CorNCM\": \"<string>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "/GetProdutoByKey",
+					"_postman_id": "89995a3f-8506-4e5f-b07c-0dcb5a303500",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrlProdutos}}/GetProdutoByKey?Produtotipo=<string>&Produtocodigo=<string>",
+							"host": [
+								"{{BaseUrlProdutos}}"
+							],
+							"path": [
+								"GetProdutoByKey"
+							],
+							"query": [
+								{
+									"key": "Produtotipo",
+									"value": "<string>"
+								},
+								{
+									"key": "Produtocodigo",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "0d8a5f7f-cf6e-4896-a149-e9cbcba9a3e8",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/GetProdutoByKey?Produtotipo=<string>&Produtocodigo=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetProdutoByKey"
+									],
+									"query": [
+										{
+											"key": "Produtotipo",
+											"value": "<string>"
+										},
+										{
+											"key": "Produtocodigo",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"ProdutoCodigo\": \"<string>\",\n    \"ProdutoSeuCodigo\": \"<string>\",\n    \"ProdutoDescricao\": \"<string>\",\n    \"LinhaId\": \"<long>\",\n    \"LinhaNome\": \"<string>\",\n    \"EspecieId\": \"<long>\",\n    \"EspecieNome\": \"<string>\",\n    \"TipoId\": \"<long>\",\n    \"TipoNome\": \"<string>\",\n    \"Unidade\": \"<string>\",\n    \"ProdutoNCM\": \"<string>\",\n    \"URL\": \"<string>\",\n    \"ProdutoTipo\": \"<string>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  },\n  {\n    \"ProdutoCodigo\": \"<string>\",\n    \"ProdutoSeuCodigo\": \"<string>\",\n    \"ProdutoDescricao\": \"<string>\",\n    \"LinhaId\": \"<long>\",\n    \"LinhaNome\": \"<string>\",\n    \"EspecieId\": \"<long>\",\n    \"EspecieNome\": \"<string>\",\n    \"TipoId\": \"<long>\",\n    \"TipoNome\": \"<string>\",\n    \"Unidade\": \"<string>\",\n    \"ProdutoNCM\": \"<string>\",\n    \"URL\": \"<string>\",\n    \"ProdutoTipo\": \"<string>\",\n    \"Error\": {\n      \"Id\": \"<string>\",\n      \"MessageType\": \"<integer>\",\n      \"Description\": \"<string>\"\n    }\n  }\n]"
+						},
+						{
+							"id": "5a31f32c-eff6-4d7d-a2f4-b445ce16fbf4",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/GetProdutoByKey?Produtotipo=<string>&Produtocodigo=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetProdutoByKey"
+									],
+									"query": [
+										{
+											"key": "Produtotipo",
+											"value": "<string>"
+										},
+										{
+											"key": "Produtocodigo",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/AtualizarTabelaPrecos__post",
+					"_postman_id": "91977bce-f177-45da-ba36-92fff09a542c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"sdtAtualizarTabelaPrecos\": {\n    \"ProdutoSeuCodigo\": \"<string>\",\n    \"CorNome\": \"<string>\",\n    \"TabelaPrecosItemVlr\": \"<double>\"\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrlProdutos}}/AtualizarTabelaPrecos"
+					},
+					"response": [
+						{
+							"id": "3e7b7ecf-8845-4b04-b192-da7b1881ef08",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sdtAtualizarTabelaPrecos\": {\n    \"ProdutoSeuCodigo\": \"<string>\",\n    \"CorNome\": \"<string>\",\n    \"TabelaPrecosItemVlr\": \"<double>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/AtualizarTabelaPrecos"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  },\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  }\n]"
+						},
+						{
+							"id": "cb5aa833-8822-46e3-b4ac-7385ece2bb70",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sdtAtualizarTabelaPrecos\": {\n    \"ProdutoSeuCodigo\": \"<string>\",\n    \"CorNome\": \"<string>\",\n    \"TabelaPrecosItemVlr\": \"<double>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/AtualizarTabelaPrecos"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/AtualizarSaldoEstoque__post",
+					"_postman_id": "427689aa-eb60-4a60-b8aa-ee6cf737cba3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Software-Hash",
+								"value": "<string>",
+								"type": "text"
+							},
+							{
+								"key": "LicencaId",
+								"value": "<string>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"sdtAtualizarSaldoEstoque\": {\n    \"LocalEstoqueDescricao\": \"<string>\",\n    \"ProdutoSeuCodigo\": \"<string>\",\n    \"CorNome\": \"<string>\",\n    \"SaldoEstoqueQtde\": \"<double>\"\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrlProdutos}}/AtualizarSaldoEstoque"
+					},
+					"response": [
+						{
+							"id": "2ff4955c-4a3e-4506-83d9-b3be7d41b54b",
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sdtAtualizarSaldoEstoque\": {\n    \"LocalEstoqueDescricao\": \"<string>\",\n    \"ProdutoSeuCodigo\": \"<string>\",\n    \"CorNome\": \"<string>\",\n    \"SaldoEstoqueQtde\": \"<double>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/AtualizarSaldoEstoque"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  },\n  {\n    \"Id\": \"<string>\",\n    \"Type\": \"<integer>\",\n    \"Description\": \"<string>\"\n  }\n]"
+						},
+						{
+							"id": "aa04646c-9c0f-4bf5-93f4-ec7771e6fc83",
+							"name": "Not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sdtAtualizarSaldoEstoque\": {\n    \"LocalEstoqueDescricao\": \"<string>\",\n    \"ProdutoSeuCodigo\": \"<string>\",\n    \"CorNome\": \"<string>\",\n    \"SaldoEstoqueQtde\": \"<double>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/AtualizarSaldoEstoque"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				}
+			],
+			"_postman_id": "4ba99181-75cd-4d23-8019-adbf6b1621e6"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e271d6c1-d11a-47be-845d-f9c0bf10b7dc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c4f562bf-3972-4f4e-a7a6-2be525a5deca",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "06ae5e99-3c32-4bcf-86c2-aa8f998088fb",
+			"key": "URL",
+			"value": "https://sistema.wvetro.com.br/wvetro/rest/api",
+			"type": "string"
+		},
+		{
+			"id": "f1f7f185-4a18-484c-8418-5e413b3431a8",
+			"key": "BaseUrlFinanceiro",
+			"value": "https://sistema.wvetro.com.br/wvetro/rest/api/Financeiro",
+			"type": "string"
+		},
+		{
+			"id": "b9a32bed-e62b-4a2d-83be-04290efe1af3",
+			"key": "BaseUrlPedidos",
+			"value": "https://sistema.wvetro.com.br/wvetro/rest/api/Pedidos",
+			"type": "string"
+		},
+		{
+			"id": "e52e56e6-7426-46c3-b98d-baf6d764bbe3",
+			"key": "BaseUrlProdutos",
+			"value": "https://sistema.wvetro.com.br/wvetro/rest/api/Produtos",
+			"type": "string"
+		},
+		{
+			"id": "f2b784a4-a919-479a-8e4e-64b43a0f8838",
+			"key": "BaseUrlClientes",
+			"value": "https://sistema.wvetro.com.br/wvetro/rest/api/Clientes",
+			"type": "string"
+		}
+	]
+}
