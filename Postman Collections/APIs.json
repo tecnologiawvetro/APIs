@@ -2120,30 +2120,30 @@
 	],
 	"variable": [
 		{
-			"id": "38d4189b-8802-4fcf-a85c-ddfafbf4cbd5",
+			"id": "086dbcbd-6d2f-4ee8-bf11-7a5bac11cd7e",
 			"key": "URL",
 			"value": "https://sistema.wvetro.com.br/wvetro/rest/api"
 		},
 		{
-			"id": "43e670ac-c511-4e72-bdf1-9c1f051d02ca",
+			"id": "30d8f12d-c7c7-455a-b319-a58f43ed11f8",
 			"key": "BaseUrlFinanceiro",
 			"value": "https://sistema.wvetro.com.br/wvetro/rest/api/Financeiro",
 			"type": "string"
 		},
 		{
-			"id": "2e8d5dfc-c358-4fef-9d48-83adb6820f02",
+			"id": "12108ea1-0033-43ed-b85a-766135746dca",
 			"key": "BaseUrlPedidos",
 			"value": "https://sistema.wvetro.com.br/wvetro/rest/api/Pedidos",
 			"type": "string"
 		},
 		{
-			"id": "16273594-f7fb-4b8c-b359-98f087357831",
+			"id": "90c17b1f-c84b-49b1-bd1a-f131bfd4331c",
 			"key": "BaseUrlProdutos",
 			"value": "https://sistema.wvetro.com.br/wvetro/rest/api/Produtos",
 			"type": "string"
 		},
 		{
-			"id": "37ea8640-6da6-41c0-bd1a-2091c94d861f",
+			"id": "19571171-d441-49b9-bcb5-db53ff7df59c",
 			"key": "BaseUrlClientes",
 			"value": "https://sistema.wvetro.com.br/wvetro/rest/api/Clientes",
 			"type": "string"
