@@ -1239,18 +1239,19 @@
 								"disabled": true
 							},
 							{
-								"key": "Software-Hash",
-								"value": "<string>",
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJTb2Z0d2FyZUludGVncmFjYW9JZCI6IjE3IiwiQ25waiI6IjQ2NDExOTE0ODQyIiwiSGFzaCI6IjRFRDE5QkJDLTUzMDUtMTFFRS1CQTU2LTE2NjZEQkY3QkRFMSIsImV4cCI6MTY5ODA2OTg3NiwiaWF0IjoxNjk4MDY5ODc2LCJqdGkiOiJiZTBlMzdmYy0yNDQwLTRhMWQtYjg2OS1iMzViYjFlMzQyOWEifQ.LRNRWvQS8TUzwzQJX17im6h2qbLfZTuVSQsVl-ynOjM",
 								"type": "text"
 							},
 							{
 								"key": "LicencaId",
 								"value": "<string>",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {
-							"raw": "{{BaseUrlPedidos}}/ListOrcamentos?Dtcadastroinicial=<date>&Dtcadastrofinal=<date>",
+							"raw": "{{BaseUrlPedidos}}/ListOrcamentos?Dtcadastroinicial=2023-08-01&Dtcadastrofinal=2023-10-01",
 							"host": [
 								"{{BaseUrlPedidos}}"
 							],
@@ -1260,11 +1261,11 @@
 							"query": [
 								{
 									"key": "Dtcadastroinicial",
-									"value": "<date>"
+									"value": "2023-08-01"
 								},
 								{
 									"key": "Dtcadastrofinal",
-									"value": "<date>"
+									"value": "2023-10-01"
 								}
 							]
 						}
