@@ -2103,8 +2103,23 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyIjoiZ2VvdmFuZSBhcmF1am8iLCJMaWNlbnNlIjoiMSIsImV4cCI6MTcxMjM0ODQ3MiwiaWF0IjoxNzEyMzQ4NDcyLCJqdGkiOiJiZTBlMzdmYy0yNDQwLTRhMWQtYjg2OS1iMzViYjFlMzQyOWEiLCJQYXNzd29yZCI6InNpc3RlbWEifQ.TJj1OSGovN9AjSwD-bgPwwCkq9-Evg5qJ8Y4zoJLrxY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sdtInsertCliente\": {\n    \"PessoaCodigo\": \"\",\n    \"PessoaTipo\": \"J\",\n    \"PessoaRazaoSocial\": \"TESTEAPI\",\n    \"PessoaFantasia\": \"TESTEAPI\"\n  }\n}"
+				},
+				"url": "https://sistema.wvetro.com.br/wvetro/rest/api/Clientes/InsertCliente"
 			},
 			"response": []
 		}
