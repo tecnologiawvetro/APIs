@@ -2098,19 +2098,7 @@
 		},
 		{
 			"name": "New Request",
-			"id": "a05a90ed-58eb-475b-a8a1-284498247e20",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "New Request",
-			"id": "0e89db21-3ce1-4d35-8aed-82a576f1ea7d",
+			"id": "c0a347d6-e35c-4bc4-aeb4-829d980aab73",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
