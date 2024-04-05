@@ -2117,7 +2117,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"sdtInsertCliente\": {\n    \"PessoaCodigo\": \"\",\n    \"PessoaTipo\": \"J\",\n    \"PessoaRazaoSocial\": \"TESTEAPI\",\n    \"PessoaFantasia\": \"TESTEAPI\"\n  }\n}"
+					"raw": "{\n  \"sdtInsertCliente\": {\n    \"PessoaCodigo\": \"\",\n    \"PessoaTipo\": \"J\",\n    \"PessoaCPFCNPJ\": \"46411914842\",\n    \"PessoaRazaoSocial\": \"WEBHOOK\",\n    \"PessoaFantasia\": \"WEBHOOK\"\n  }\n}"
 				},
 				"url": "https://sistema.wvetro.com.br/wvetro/rest/api/Clientes/InsertCliente"
 			},
