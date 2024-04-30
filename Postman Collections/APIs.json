@@ -2245,17 +2245,11 @@
 					{
 						"key": "Content-Type",
 						"value": "application/json"
-					},
-					{
-						"key": "",
-						"value": "",
-						"type": "text",
-						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": " {\r\n        \"nome\": \"6217-WVETRO\",\r\n        \"email\": \"angelo.bottaro@wvetro.com\",\r\n        \"cpf\": \"464.119.148-42\",\r\n        \"telefone\": \"\",\r\n        \"telefone2\": \"\",\r\n        \"username\": \"TESTEUSER\",\r\n        \"senha\": \"TESTEUSER\",\r\n        \"nascido_em\": \"0000-00-00\",\r\n        \"locale\": \"\"\r\n    }"
+					"raw": "{\r\n    \"nome\": \"206-RONE BOX DESDE 1976\",\r\n    \"email\": \"VENDAS@RONEBOX.COM.BR\",\r\n    \"username\": \"RONEBOX2015\",\r\n    \"senha\": \"RONEBOX2015\",\r\n    \"cpf\": \"46.440.228/0001-01\"\r\n}"
 				},
 				"url": "http://acesso.evolutto.com.br/api/v1/usuarios"
 			},
