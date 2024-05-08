@@ -2266,6 +2266,18 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"id": "e401b06a-7b97-4095-82e3-1394a73146f8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"event": [
