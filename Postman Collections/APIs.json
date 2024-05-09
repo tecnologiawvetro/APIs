@@ -2286,8 +2286,31 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6W10sImV4cCI6NDMzNDEzNTUyNywidXNlcm5hbWUiOiJhcGkud3ZldHJvMDhhOGExMmNmMGVlIiwiaWF0IjoxNzAxNzEwMjUyfQ.a5Fo3vwEBak_PIIYN-XZrkAe_Gllko2Xnctd7yMiIMMi-tLtdkZ7NZk89wh5ZKx--pCwkYq7K54bLFgja9IcSyi0Cf7rNmn819vK2On4B79EDDXzFmXFjuZ4J4sNa2vfXfvKzPHHWufZavJmlVMj0PaqP-JOeTFjJa0zWwtmEPgpvbgLyiN0vHdeRQ5dJpZ4et0QLxXG54oL_nb1wt-Az2kZgEPG_U0X353bRvBM011DMGz1oz3MiMtaoKlFYVMI7vY3y-Di_92WbNVzRsskXBiGKYShvctBnIDmLxELEzI75eDhlUnuwLBE8AQ2TLn5mNr4kUsY8xrx5GqpfeRrmmuCqTxuc0Dfw-e9flsGGDlYXdIjWTtZTsU0uwcFOPeMQC3eAUGSp4mdNxKN3PBknWYdGu-WeuO40N4cKgQnzslv6o_DtP5dM7kNt4b-iBe67K9OPnraEkJ8_wdxKK3b-HBY4PcbOrxibhnkb0_MxqIGqdtZ_DGGTPkPdqxgd73g4hhwtOXduiYuy8VFEn9TromfHX5T873SrqrsdDXXj5ayTRF_6oKMyuA2rWOE2A6BFrXpCLVAjZtc0Yun8TESSL6EB4uw8mCAKp5pVgRe7r-SQgKxYsUdjsFQ-eE9Aqloz9PiKZqJwnVe3T06wp6M3dLKdoHCNrqbdjJriVx0rLU"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contrato_id\": 303420,\r\n    \"usuario\":{\r\n        \"nome\":\"TESTEEVO\",\r\n        \"email\":\"gcalixtocampos16@gmail.com\",\r\n        \"papel\": 4\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://acesso.evolutto.com.br/api/v1/contratos/participantes/convites"
 			},
 			"response": []
 		}
