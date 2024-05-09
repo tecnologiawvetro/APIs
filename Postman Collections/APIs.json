@@ -2278,6 +2278,18 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "New Request Copy 2",
+			"id": "531982f2-7aa2-4cf5-a3e6-bc10457be3b1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"event": [
